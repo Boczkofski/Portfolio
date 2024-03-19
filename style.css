@@ -6,6 +6,14 @@
     text-decoration: none;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+.wrapper {
+    max-width: 100%; /* Change this to a suitable percentage */
+}
+
+
 body{
     overflow-x: hidden;
 }
@@ -255,8 +263,13 @@ nav .navlinks li a{
     .container{
         flex-direction: column;
         padding-top: 2rem;
+        align-items: center; /* Add this to center content */
     }
     .hero-text{
-        padding: 40px 0px;
+        padding: 40px 20px; /* Add padding to adjust spacing */
+        text-align: center; /* Center text */
+    }
+    .hero-pic {
+        margin-bottom: 20px; /* Add margin to space out the profile picture */
     }
 }
