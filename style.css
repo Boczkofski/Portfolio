@@ -6,8 +6,6 @@
     text-decoration: none;
 }
 
-
-
 body{
     overflow-x: hidden;
 }
@@ -60,13 +58,6 @@ header{
     color: #fff;
 }
 
-nav {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-
-}
-
 nav .togglebtn{
     width: 35px;
     height: 35px;
@@ -88,7 +79,7 @@ nav .togglebtn span{
     transition-property: transform, opacity;
 }
 
-nav .navlinks {
+nav .navlinks{
     list-style-type: none;
 }
 
@@ -109,23 +100,18 @@ nav .navlinks li a{
 }
 
 .container .hero-pic{
-    max-width: 300px;
-    max-height: 300px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
     border: 15px solid #444;
     box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
-    aspect-ratio: 1/1;
-    object-fit: contain;
 }
 
 .hero-pic img{
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     transition: 0.5s;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: center;
 }
 
 .hero-pic img:hover{
@@ -242,21 +228,19 @@ nav .navlinks li a{
     }
     nav .navlinks{
             position: absolute;
-            overflow: hidden;
             top: 110px;
+            right: -100%;
             bottom: 0;
-            width: 100%;
+            width: 60%;
             height: 100vh;
             background-color: #222;
             z-index: 3;
             box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
             transition: 0.5s;
             padding: 25px 0px;
-            transform: translateX(-100vw);
     }
     nav .navlinks li{
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
     nav .navlinks li a{
         display: block;
@@ -265,20 +249,14 @@ nav .navlinks li a{
     }
     nav .navlinks.open{
         right: 0;
-        transform: translateX(0vw);
     }
 }
 @media(max-width:768px){
     .container{
         flex-direction: column;
         padding-top: 2rem;
-        align-items: center; /* Add this to center content */
     }
     .hero-text{
-        padding: 40px 20px; /* Add padding to adjust spacing */
-        text-align: center; /* Center text */
-    }
-    .hero-pic {
-        margin-bottom: 20px; /* Add margin to space out the profile picture */
+        padding: 40px 0px;
     }
 }
